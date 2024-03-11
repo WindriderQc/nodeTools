@@ -1,3 +1,3 @@
-const nodeTools = require('./nodeTools')
+const nodetools = require('./nodetools')
 
-module.exports = nodeTools;
+module.exports = nodetools;
