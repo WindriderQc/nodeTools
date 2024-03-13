@@ -45,7 +45,7 @@ exports.saveFile = async (source, destination) =>{
     await fs.writeFile(destination, source);
     console.log(`Saved file to ${destination}`);
   } catch (error) {
-    console.error(`Got an error trying to move the file: ${error.message}`);
+    console.error(`Got an error trying to save the file: ${error.message}`);
   }
 }
 
