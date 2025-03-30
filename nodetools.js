@@ -70,14 +70,14 @@ exports.checkApi = async (useName, apiurl) =>  {
         const response = await fetch(apiurl);
         console.log('API response: ', response)
         if (response.ok) {
-            console.log('\n\n' + useName + ' API is online\n\n');
+            console.log('\n\n' + useName + ' is online\n\n');
             return true
         } else {
-            console.log('\n\n' + useName + ' API is offline\n\n');
+            console.log('\n\n' + useName + ' is offline\n\n');
             return false
         }
     } catch (error) {
-        console.log('\n\n' + useName + ' API is offline\n\n');
+        console.log('\n\n' + useName + ' is offline\n\n');
         return false    
     }
 }
