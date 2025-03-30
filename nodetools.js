@@ -56,11 +56,36 @@ exports.isExisting = async (path) => {
   else return false
 }
 
-
 exports.isObjEmpty =  (obj) => {
   for(let i in obj) return false
   return true
 }
+
+
+
+
+exports.checkApi = async (useName, apiurl) =>  {
+    try {
+        console.log('Checkin API: ' + useName + ' - API url: ' + apiurl)
+        const response = await fetch(apiurl);
+        console.log('API response: ', response)
+        if (response.ok) {
+            console.log('\n\n' + useName + ' API is online\n\n');
+            return true
+        } else {
+            console.log('\n\n' + useName + ' API is offline\n\n');
+            return false
+        }
+    } catch (error) {
+        console.log('\n\n' + useName + ' API is offline\n\n');
+        return false    
+    }
+}
+
+
+
+
+
 
 
 exports.TimeDiff = (startTime, endTime, format) => {
