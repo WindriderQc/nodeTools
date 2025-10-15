@@ -1,3 +1,7 @@
 const nodetools = require('./nodetools')
+const auth = require('./auth')
 
-module.exports = nodetools;
+module.exports = {
+  ...nodetools,
+  auth
+};
